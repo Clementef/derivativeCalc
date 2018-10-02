@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block pagetitle %}
+Home
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+
+
+      <div class="form-row align-items-center">
+        <div class="col-auto">
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">{{ form.function.label }}</div>
+            </div>
+            {{ form.function() }}
+          </div>
+        </div>
+        <div class="col-auto">
+            {{ form.submit(class='btn btn-primary mb-2') }}
+        </div>
+      </div>
+    </form>
+</div>
+
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">f(x) = {{ function }}</h1>
+        <hr class="my-4">
+        <h3>
+        f'(x) = {{ derivative }}
+        </h3>
+    </div>
+</div>
+{% endblock %}

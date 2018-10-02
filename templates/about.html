@@ -1,0 +1,145 @@
+{% extends 'layout.html' %}
+
+{% block pagetitle %}
+About
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">About DerivativeCalc</h1>
+        <small>DerivativeCalc was created by Clemente Ferrer.</small>
+        <hr class="my-4">
+        <h2><u>Docs</u></h2>
+
+        <h3>I can take the derivative of polynomial functions</h3>
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="2*x" readonly>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f'(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="2" readonly>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="x**2 + 2*x - 5" readonly>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f'(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="2*x + 2" readonly>
+              </div>
+            </div>
+          </div>
+        </form>
+        <br />
+
+        <h3>I can also find f' for trig functions</h3>
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="sin(x)" readonly>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f'(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="cos(x)" readonly>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="tan(2*x)" readonly>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f'(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="2*tan(2*x)**2 + 2" readonly>
+              </div>
+            </div>
+          </div>
+        </form>
+        <br />
+
+        <h3>I can even do the natural exponential function</h3>
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="exp(x)" readonly>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f'(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="exp(x)" readonly>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form>
+          <div class="form-row align-items-center">
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="exp(2**x)" readonly>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">f'(x)=</div>
+                </div>
+                <input type="text" class="form-control" value="2**x*exp(2**x)*log(2)" readonly>
+              </div>
+            </div>
+          </div>
+        </form>
+        <br />
+    </div>
+</div>
+{% endblock %}
