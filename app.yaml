@@ -1,3 +1,7 @@
-runtime: python27
+runtime: python3
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
+
 api_version: 1
 threadsafe: true
+
