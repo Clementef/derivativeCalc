@@ -1,2 +1,10 @@
+Click==7.0
 Flask==1.0.2
-Werkzeug<0.13.0,>=0.12.0
+Flask-WTF==0.14.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+mpmath==1.0.0
+sympy==1.3
+Werkzeug==0.12.2
+WTForms==2.2.1
