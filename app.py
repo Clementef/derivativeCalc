@@ -19,7 +19,6 @@ class derivativeForm(FlaskForm):
 def home():
     function = "x**2"
     derivative = diff(x**2,x)
-    print('derivative done')
     integral = integrate(x**2,x)
 
     form = derivativeForm()
