@@ -12,14 +12,15 @@ app.config['SECRET_KEY'] = 'supersneaky'
 
 class derivativeForm(FlaskForm):
     global example
-    function = StringField("f(x)=",render_kw={"placeholder": " tan(cos(5*x**2))"})
+    function = StringField("f(x)=",render_kw={"placeholder": " x**2"})
     submit = SubmitField('Calculate')
 
 @app.route("/",methods=['GET','POST'])
 def home():
-    global example
-    function = "tan(cos(5*x**2))"
-    derivative = diff(tan(cos(5*x**2)),x)
+    function = "x**2"
+    derivative = diff(x**2,x)
+    print('derivative done')
+    integral = integrate(x**2,x)
 
     form = derivativeForm()
 
@@ -28,10 +29,12 @@ def home():
         form.function.data = ''
         try:
             derivative = diff(function,x)
+            integral = integrate(function,x)
         except:
             derivative = 'Error - Cannot Read Input'
+            integral = 'Error - Cannot Read Input'
 
-    return(render_template('home.html',form=form,function=function,derivative=derivative))
+    return(render_template('home.html',form=form,function=function,derivative=derivative,integral=integral))
 
 @app.route("/about")
 def about():

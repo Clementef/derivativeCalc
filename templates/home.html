@@ -28,14 +28,30 @@ Home
 </div>
 
 
+        <!--<hr class="my-4">-->
 
 <div class="container">
     <div class="jumbotron">
         <h1 class="display-4">f(x) = {{ function }}</h1>
-        <hr class="my-4">
-        <h3>
-        f'(x) = {{ derivative }}
-        </h3>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="jumbotron">
+                <h3>
+                f'(x) = {{ derivative }}
+                </h3>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="jumbotron">
+                <h3>
+                ∫f(x)dx = {{ integral }}
+                </h3>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
